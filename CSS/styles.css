@@ -38,7 +38,7 @@ body {
     padding: 10px;
 }
 .nav li a {
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-align:center;
     color: #31748f;
     text-decoration: none;
@@ -57,7 +57,7 @@ li a:hover {
 }
 .plus_button {
     display: flex;
-    flex-flow: rowwrap;
+    flex-flow: row wrap;
     justify-content: flex-end;
     margin-top: 80px;
     padding-right: 0px;
@@ -71,7 +71,7 @@ li a:hover {
 }
 .textarea {
     display:flex;
-    flex-flow: rowwrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
     padding-left: 0px;
     resize: none;
@@ -111,10 +111,11 @@ p {
 }
 .header a {  
     text-decoration: none;
-    padding: 20px;
+    padding: 8x 20px;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #31748f;
+    margin:10px;
 }
 .footer {
     grid-column-start: 3;
@@ -125,7 +126,7 @@ p {
 }
 .footer {
     display: flex;
-    flex-flow: rowwrap;
+    flex-flow: row wrap;
     justify-content: center;
     margin-right: 30px;
 }
@@ -135,42 +136,42 @@ p {
     color: #286983;
     font-weight: bold;
 }
-.header_1{
+.header_1 {
     display: flex;
-    flex-flow: rowwrap;
+    flex-flow: row wrap;
     justify-content: flex-end;
-    background-color: #f2e9de;
-    padding: 0px;
+    background-color: #f2e9de; 
+    margin-right: 0px;  
 }
 .header_1 a {  
     text-decoration: none;
-    padding: 8px 20px;
-    font-family: 'Montserrat', sans-serif; 
+    padding: 8px 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     color: #31748f;
-    font-weight: bold;   
-} 
+}
 .container_1 {
-    display:grid;
+    display: grid;
     grid-template-columns: 15vw 85vw;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-rows: 10vh 90vh;
 }
 .box_1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
     background-color: #f2e9de;
 }
 .btn_1 {
     display: flex;
-    flex-flow: rowwrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
 }
 .box_2 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 3;
     background-color: #f2e9de;
 }
 .btn_2{
@@ -182,9 +183,11 @@ p {
     flex-flow: row wrap;
     justify-content: center;
     background-color: #f2e9de;
+    margin-right: 0px;
 }
-.footer_1 p {
-    display:block;
-    text-align: center; 
-    font-weight: bold;   
-} 
+.footer_1 p { 
+    display: block;
+    text-align: center;
+    color: #286983;
+    font-weight: bold; 
+}
