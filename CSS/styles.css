@@ -93,9 +93,9 @@ li a:hover {
 .delete {
     color: #555169;
 }
-
 p {
     font-family: 'Montserrat', sans-serif;
+    color: #31748f;
 }
 .col-4 {
     grid-column-start: 4;
@@ -129,65 +129,62 @@ p {
     justify-content: center;
     margin-right: 30px;
 }
-
 .footer p { 
     display: block;
     text-align: center;
     color: #286983;
     font-weight: bold;
 }
-
-.footer_1 {
+.header_1{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: rowwrap;
+    justify-content: flex-end;
+    background-color: #f2e9de;
+    padding: 0px;
 }
-
-.footer_1 p {
-    display:block;
-    text-align: center;    
-}
-
+.header_1 a {  
+    text-decoration: none;
+    padding: 8px 20px;
+    font-family: 'Montserrat', sans-serif; 
+    color: #31748f;
+    font-weight: bold;   
+} 
 .container_1 {
     display:grid;
     grid-template-columns: 15vw 85vw;
-    grid-template-rows: 95vh 5vh;
+    grid-template-rows: 10vh 80vh 10vh;
 }
-
 .box_1 {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: #c4a7e7;
+    grid-row-end: 4;
+    background-color: #f2e9de;
 }
-
+.btn_1 {
+    display: flex;
+    flex-flow: rowwrap;
+    justify-content: flex-start;
+}
 .box_2 {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
-    grid-row-end: 3;
-    background-color: #c4a7e7;
-}
-
-.header_1 {
-    display: grid;
-    grid-template-columns: 15vw 85vw;
-    grid-template-rows: 10vh;    
-}
-
-.header_1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-end: 4;
     background-color: #f2e9de;
-    margin: 0px;
-    padding: 0px;
 }
-
-.header_1 a {  
-    text-decoration: none;
-    padding: 8px 20px;
-    font-family: 'Montserrat', sans-serif;    
-}  
+.btn_2{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+.footer_1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #f2e9de;
+}
+.footer_1 p {
+    display:block;
+    text-align: center; 
+    font-weight: bold;   
+} 
