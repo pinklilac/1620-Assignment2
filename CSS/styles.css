@@ -1,5 +1,8 @@
 @charset "utf-8";
-
+*{
+    margin:0;
+    padding: 0;
+}
 body {
     margin:0;
     padding:0;
@@ -89,12 +92,20 @@ li a:hover {
     margin: 10px;
     padding: 4px;
 }
-.save {
-    color: #eb6f92;  
+#save {
+    color: #eb6f92; 
+    border: 1.5px, solid, #907aa9;
+    margin-right: 6px;
+    padding: 7px;
 }
-.delete {
+#delete {
     color: #555169;
+    border: 1.5px, solid, #907aa9;
+    margin-left: 6px;
+    padding: 7px;
+    
 }
+
 p {
     font-family: 'Montserrat', sans-serif;
     color: #31748f;
