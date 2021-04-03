@@ -97,13 +97,16 @@ li a:hover {
     border: 1.5px, solid, #907aa9;
     margin-right: 6px;
     padding: 7px;
+    font-size: 15px;
+    color: #d7827e;
 }
 #delete {
     color: #555169;
     border: 1.5px, solid, #907aa9;
     margin-left: 6px;
     padding: 7px;
-    
+    font-size: 15px;
+    color: #393552;
 }
 
 p {
