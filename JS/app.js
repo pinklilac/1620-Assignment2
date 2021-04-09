@@ -33,5 +33,34 @@
 
 */
 
+let darkModeOn=false;
+let noteArray=[];
 
+function dark_light(){
+    document.body.classList.toggle("dark");
+    var note = document.getElementsByTagName('a')
+    if (darkModeOn) {
+        for (var i=0; i<note.length; i++){
+            note[i].style.color = '#26233a';
+        }
+        if (document.querySelector('note_input')!=null){
+            document.querySelector('textarea').style.color= '#6e6a86';
+            document.querySelector('textarea').style.backgroundColor='#faf4ed';
+            document.querySelector('note_input').style.color='#2a273f';
+            document.querySelector('note_input').style.backgroundColor='#faf4ed';
+        }
+        darkModeOn=false;    
+    }else {
+       for(vari=0; i<note.length; i++){
+           note[i].style.color='#f2e9de';
+       }
+       if(document.querySelector('note_input')!=null){
+        document.querySelector('textarea').style.color= '#f2e9de';
+        document.querySelector('textarea').style.backgroundColor='#6e6a86';
+        document.querySelector('note_input').style.color='#f2e9de';
+        document.querySelector('note_input').style.backgroundColor='#6e6a86';
+       }
+       darkModeOn=true;
+    }
+}
 

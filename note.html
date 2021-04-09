@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+    <script src="JS/app.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -18,6 +19,7 @@
                 <button class="button_arrow"><<</button>
             </div>
             <div class="nav">
+                <div class="hideNote">Hide Note</div>
                 <ul>
                     <li><a href="#">My Notes</a></li>
                     <li><a href="#">note one</a></li>
@@ -29,6 +31,7 @@
         <div class="col-2">
             <div class="plus_button">
                 <button class="plus">+</button>
+                <button onclick="dark_light()">"Dark/Light</button>
             </div>
         </div>
         <div class="col-3">
@@ -37,8 +40,8 @@
             <textarea id="text" name="text" rows="30" cols="120" placeholder="your note here"></textarea>
             </div>
             <div class ="button">
-                <button id="save">save</button>
-                <button id="delete">delete</button>
+                <button onclick="save()">save</button>
+                <button onclick="cancel()">delete</button>
             </div>        
         </div>
         <div class="col-4">
