@@ -63,3 +63,57 @@ function dark_light(){
         darkModeOn=true;
     }
 }
+function defineNoteWritingSection() {
+    html = 
+        <div id="note-area">
+        <div id="note" contenteditable="true"></div>
+        <button onclick="saveNote">save</button>
+        <button onclick="cleanUp">cancel</button>
+    </div>
+    return html
+}
+
+function createContentWritingArea() {
+    const div=document.querySelector('#content')
+    div.insertAdjacentHTML('beforeend', defineNoteWritingSection())
+    set_cursor()
+}
+
+function set_cursor(){
+    const div=document.querySelector('#note-area')
+    div.focus()
+}
+function saveNote(){
+    const div = document.querySelector('#note')
+    const title=div.firstChild.textContent
+    notesArray.push(createNote(title, "body"))
+    console.log(notesArray)
+}
+function createNote(title, body){
+    return {title, body}
+}
+
+ function convertDivsToString(){
+     let str=""
+     const divs = [...document.querySelectorAll('[contenteditable]>div:not(:first-child)')]
+     for (const i of divs){
+         str +='${i.textContent}\n'
+     }
+     return str
+ }
+function cleanUp(){
+    const div=document.querySelector('#note-area')
+    div.remove()
+}
+function saveTextArea(){
+    const note = document.querySelector('textarea').value
+    console.log(note)
+    const notearr = note.split('\n\n')
+    notesArray.push(createNoteObject(notearr))
+    document.querySelector('textarea'),value=""
+    console.log(notesArray)
+}
+function createNoteObject(arr){
+    return newObject={title:arr[0], body:arr[1]}
+}
+    

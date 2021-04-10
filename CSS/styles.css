@@ -210,6 +210,7 @@ p {
     padding: 10px 20px;
     max-width: 600px;
 }
+
 [contenteditable]{
     font-size: 25px;
     color: #31748f;
@@ -236,7 +237,7 @@ button{
     margin: 8px 8px 0px 0px;
     border:none;
     background-color: #fffaf3;
-    color: #191724;
+    color: #c4a7e7;
 }
 
 .btn_2{
