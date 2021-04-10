@@ -33,3 +33,33 @@
 
 */
 
+let darkModeOn=false;
+let notesArray=[]
+
+function dark_light(){
+    document.body.classList.toggle("dark");
+    var note=document.getElementsByTagName('a');
+    if (darkModeOn){
+        for(var i =0; i<note.length; i++){
+            note[i].style.color='#1f1d2e';
+        }
+        if (document.querySelector('input')!=null){
+            document.querySelector('textarea').style.backgroundColor='#faf4ed';
+            document.querySelector('textarea').style.color='#2a273f';
+            document.querySelector('input').style.backgroundColor='#faf4ed';
+            document.querySelector('input').style.color='#2a273f';
+        }
+        darkModeOn=false;
+    }else{
+        for(vari=0; i<note.length; i++){
+            note[i].style.color="#f2e9de";
+        }
+        if(document.querySelector('input') !=null){
+           document.querySelector('input').style.backgroundColor='#59546d';
+           document.querySelector('textarea').style.backgroundColor='#59546d';
+           document.querySelector('input').style.color='#fffaf3';
+           document.querySelector('textarea').style.color='#fffaf3';
+        }
+        darkModeOn=true;
+    }
+}
