@@ -1,36 +1,5 @@
 
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@pinklilac
-pinklilac /
-1620-Assignment2
 
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-1620-Assignment2/CSS/styles.css
-@pinklilac
-pinklilac changed styling to + button
-Latest commit f48e0fa 7 days ago
-History
-1 contributor
-221 lines (218 sloc) 3.94 KB
 @charset "utf-8";
 *{
     margin:0;
@@ -133,7 +102,7 @@ li a:hover {
     margin-right: 6px;
     padding: 7px;
     font-size: 15px;
-    color: #d7827e;
+    color: #f6c177;
 }
 #delete {
     border: 1.5px, solid, #907aa9;
@@ -206,6 +175,10 @@ p {
     grid-template-rows: 10vh 80vh 10vh;
     background-color: #f2e9de;
 }
+.container_1 {
+    background-color: #fffaf3;
+
+}
 .box_1 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -223,6 +196,43 @@ p {
     grid-row-start: 1;
     grid-row-end: 3;
 }
+.fas{
+    color: #1f1d2e;
+    font-size: 40px;
+}
+#content{
+    padding: 10px 20px;
+    max-width: 600px;
+}
+[contenteditable]{
+    font-size: 25px;
+    color: #31748f;
+}
+[contenteditable]> div {
+    font-size: 18px;
+    color: #1f1d2e;
+}
+[contenteditable]> div:first-child{
+    color: #31748f;
+    font-size: 25px;
+}
+[contenteditable]>div:first-child{
+    color: #31748f;
+    font-size: 25px;
+}
+[contenteditable]:focus{
+    outline:none;
+}
+button{
+    font-size: 18px;
+    padding-top: 5px;
+    margin-top: 5px;
+    margin: 8px 8px 0px 0px;
+    border:none;
+    background-color: #fffaf3;
+    color: #191724;
+}
+
 .btn_2{
     margin-top: 60px;
     margin-left: 20px;
