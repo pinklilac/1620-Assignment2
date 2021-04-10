@@ -37,22 +37,24 @@ let darkModeOn=false;
 let notesArray=[]
 
 function dark_light(){
-    document.body.classList.toggle("dark");
+    // document.getElementById('appli').classList.toggle("dark");
+    document.getElementsByTagName('body')[0].classList.toggle("dark");
+    // document.getElementsByClassName('container')[0].classList.toggle("dark");
     var note=document.getElementsByTagName('a');
     if (darkModeOn){
         for(var i =0; i<note.length; i++){
-            note[i].style.color='#1f1d2e';
+            note[i].style.color='#31748f';
         }
         if (document.querySelector('input')!=null){
-            document.querySelector('textarea').style.backgroundColor='#faf4ed';
+            document.querySelector('textarea').style.backgroundColor='#fffaf3';
             document.querySelector('textarea').style.color='#2a273f';
-            document.querySelector('input').style.backgroundColor='#faf4ed';
+            document.querySelector('input').style.backgroundColor='#fffaf3';
             document.querySelector('input').style.color='#2a273f';
         }
         darkModeOn=false;
     }else{
         for(vari=0; i<note.length; i++){
-            note[i].style.color="#f2e9de";
+            note[i].style.color='#fffaf3';
         }
         if(document.querySelector('input') !=null){
            document.querySelector('input').style.backgroundColor='#59546d';
@@ -64,12 +66,12 @@ function dark_light(){
     }
 }
 function defineNoteWritingSection() {
-    html = 
+    html = `
         <div id="note-area">
         <div id="note" contenteditable="true"></div>
         <button onclick="saveNote">save</button>
-        <button onclick="cleanUp">cancel</button>
-    </div>
+        <button onclick="clearUp">cancel</button>
+    </div>`
     return html
 }
 
@@ -80,12 +82,12 @@ function createContentWritingArea() {
 }
 
 function set_cursor(){
-    const div=document.querySelector('#note-area')
-    div.focus()
+    const div=document.querySelector('.textarea')
+    // div.focus()
 }
 function saveNote(){
-    const div = document.querySelector('#note')
-    const title=div.firstChild.textContent
+    const div = document.querySelector('.textarea')
+    const title=div.firstChild.text
     notesArray.push(createNote(title, "body"))
     console.log(notesArray)
 }
@@ -101,16 +103,16 @@ function createNote(title, body){
      }
      return str
  }
-function cleanUp(){
-    const div=document.querySelector('#note-area')
+function clearUp(){
+    const div=document.querySelector('.textarea')
     div.remove()
 }
 function saveTextArea(){
-    const note = document.querySelector('textarea').value
-    console.log(note)
-    const notearr = note.split('\n\n')
+    const note = document.querySelector('.textarea').value
+    console.log(text)
+    const notearr = text.split('\n\n')
     notesArray.push(createNoteObject(notearr))
-    document.querySelector('textarea'),value=""
+    document.querySelector('.textarea').value=""
     console.log(notesArray)
 }
 function createNoteObject(arr){

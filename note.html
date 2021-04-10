@@ -1,36 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@pinklilac
-pinklilac /
-1620-Assignment2
-
-1
-0
-
-    0
-
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-
-    Settings
-
-1620-Assignment2/note.html
-@pinklilac
-pinklilac add label tag above text area to avoid accessiblity issue
-Latest commit 709d816 6 days ago
-History
-1 contributor
-59 lines (53 sloc) 1.8 KB
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,13 +5,13 @@ History
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-control" content="private">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <link href="CSS/styles.css" rel="stylesheet" type="text/css">
     <script defer src="JS/app.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
-<body>
+<body id="appli">
    
     <div class="container">
         <div class ="col-1">
@@ -63,21 +30,25 @@ History
         <div class="col-2">
             <div class="plus_button">
                 <button class="plus">+</button>
+                <!-- <button onclick="createContentWritingArea()">+</button>     -->
             </div>
+            <!-- <div id="content"></div>
+            <div id="view-note"></div> -->
         </div>
         <div class="col-3">
             <button onclick="dark_light()">Change Theme</button>
             <div class="title">
             <label for="title">Title</label>
-            <input type="text" width-300px mb-1 id="title" name="title" >
+            <input type="text" id="title" width-300px mb-1 name="title">
             </div>
             <div class="textarea">
             <label for="text"></label>
             <textarea id="text" name="text" rows="30" cols="120" placeholder="your note here"></textarea>
+            
             </div>
             <div class ="button">
-                <button onclick="save_note()">save</button>
-                <button onclick="cancel_note()">delete</button>
+                <button onclick="saveNote()">save</button>
+                <button onclick="clearUp()">delete</button>
             </div>        
         </div>
         <div class="col-4">

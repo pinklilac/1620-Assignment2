@@ -1,18 +1,19 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    <!-- <script src="https://kit.fontawesome.com/2b5b56bb95.js" crossorigin="anonymous"></script> -->
     <link href="CSS/styles.css" rel="stylesheet" type="text/css">
     <script defer src="JS/app.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
+    
     <title>Document</title>
 </head>
-<body>
+<body id="appli">
     <div class="header_1">
         
         <a href="#">About</a>
@@ -21,16 +22,16 @@
     </div>
     <div class="container_1">
         <div class ="box_1">
-            <button class="btn_1">>></button>
+            <!-- <button class="btn_1">>></button> -->
             <button onclick="dark_light()">Change Theme</button>
         </div>
         <div class= "box_2">
             <div class="btn_2">
-                <span onclick="createContentWritingArea()"><i class="fas fa-plus"></i></span>
+                <button onclick="createContentWritingArea()">+</button>
             </div>
             <div id="content"></div>
             <div id="view-note"></div>
-                <button class="btn_note">create a new note</button>
+                <!-- <button class="btn_note">create a new note</button> -->
             </div>
         </div>
     </div>
