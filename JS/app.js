@@ -40,10 +40,10 @@ function dark_light(){
     // document.getElementById('appli').classList.toggle("dark");
     document.getElementsByTagName('body')[0].classList.toggle("dark");
     // document.getElementsByClassName('container')[0].classList.toggle("dark");
-    var note=document.getElementsByTagName('a');
+    var word=document.getElementsByTagName('a');
     if (darkModeOn){
-        for(var i =0; i<note.length; i++){
-            note[i].style.color='#31748f';
+        for(var i =0; i<word.length; i++){
+            word[i].style.color='#31748f';
         }
         if (document.querySelector('input')!=null){
             document.querySelector('textarea').style.backgroundColor='#fffaf3';
@@ -53,8 +53,8 @@ function dark_light(){
         }
         darkModeOn=false;
     }else{
-        for(vari=0; i<note.length; i++){
-            note[i].style.color='#fffaf3';
+        for(vari=0; i<word.length; i++){
+            word[i].style.color='#fffaf3';
         }
         if(document.querySelector('input') !=null){
            document.querySelector('input').style.backgroundColor='#59546d';
@@ -70,7 +70,7 @@ function defineNoteWritingSection() {
         <div id="note-area">
         <div id="note" contenteditable="true"></div>
         <button onclick="saveNote">save</button>
-        <button onclick="clearUp">cancel</button>
+        <button onclick="cleanUp">cancel</button>
     </div>`
     return html
 }
@@ -82,12 +82,12 @@ function createContentWritingArea() {
 }
 
 function set_cursor(){
-    const div=document.querySelector('.textarea')
-    // div.focus()
+    const div=document.querySelector('#note')
+    div.focus()
 }
 function saveNote(){
-    const div = document.querySelector('.textarea')
-    const title=div.firstChild.text
+    const div = document.querySelector('#note')
+    const title=div.firstChild.textContent
     notesArray.push(createNote(title, "body"))
     console.log(notesArray)
 }
@@ -99,20 +99,20 @@ function createNote(title, body){
      let str=""
      const divs = [...document.querySelectorAll('[contenteditable]>div:not(:first-child)')]
      for (const i of divs){
-         str +='${i.textContent}\n'
+         str += `${i.textContent}\n`
      }
      return str
  }
-function clearUp(){
-    const div=document.querySelector('.textarea')
+function cleanUp(){
+    const div=document.querySelector('#note-area')
     div.remove()
 }
 function saveTextArea(){
-    const note = document.querySelector('.textarea').value
-    console.log(text)
-    const notearr = text.split('\n\n')
+    const note = document.querySelector('textarea').value
+    console.log(note)
+    const notearr = note.split('\n\n')
     notesArray.push(createNoteObject(notearr))
-    document.querySelector('.textarea').value=""
+    document.querySelector('textarea').value=""
     console.log(notesArray)
 }
 function createNoteObject(arr){

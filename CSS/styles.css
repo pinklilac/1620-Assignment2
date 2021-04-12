@@ -107,14 +107,14 @@ li a:hover {
     margin: 10px;
     padding: 4px;
 }
-#save {
+.save {
     border: 1.5px, solid, #907aa9;
     margin-right: 6px;
     padding: 7px;
     font-size: 15px;
-    color: #f6c177;
+    color:  #393552;
 }
-#delete {
+.delete {
     border: 1.5px, solid, #907aa9;
     margin-left: 6px;
     padding: 7px;
@@ -205,12 +205,9 @@ p {
     grid-row-start: 1;
     grid-row-end: 3;
 }
-.fas{
-    color: #1f1d2e;
-    font-size: 40px;
-}
+
 #content{
-    padding: 10px 20px;
+    padding: 10px 19px;
     max-width: 600px;
 }
 
